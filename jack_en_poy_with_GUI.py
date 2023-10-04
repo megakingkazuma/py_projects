@@ -1,12 +1,12 @@
 import tkinter as tk
 import random as random
 
-comp = ["rock", "paper", "scizors"]
+comp = ["rock", "paper", "scissors"]
 result = ''
 
 def rock():
     comp_choice = comp[random.randint(0, 2)]
-    if comp_choice == "scizors":
+    if comp_choice == "scissors":
         print(f"computer chose {comp_choice}, you win.")
     elif comp_choice == "rock":
         print(f"computer chose {comp_choice}, its a draw.")
@@ -15,7 +15,7 @@ def rock():
 
 def paper():
     comp_choice = comp[random.randint(0, 2)]
-    if comp_choice == "scizors":
+    if comp_choice == "scissors":
         print(f"computer chose {comp_choice}, you lose.")
     elif comp_choice == "rock":
         print(f"computer chose {comp_choice}, you win.")
@@ -24,7 +24,7 @@ def paper():
 
 def szrs():
     comp_choice = comp[random.randint(0, 2)]
-    if comp_choice == "scizors":
+    if comp_choice == "scissors":
         print(f"computer chose {comp_choice}, its a draw.")
     elif comp_choice == "rock":
         print(f"computer chose {comp_choice}, you loose.")
@@ -33,7 +33,7 @@ def szrs():
 
 root = tk.Tk()
 root.geometry("300x150")
-root.title("Rock Paper Scizors Game")
+root.title("Rock Paper Scissors Game")
 
 label = tk.Label(root, text="Choose an option:")
 label.pack()
@@ -42,7 +42,7 @@ btn_rock = tk.Button(root, text="Rock!", command=rock)
 btn_rock.pack(padx=5, pady=5)
 btn_paper = tk.Button(root, text="Paper!", command=paper)
 btn_paper.pack(padx=5, pady=5)
-btn_szrs = tk.Button(root, text="scizors!", command=szrs)
+btn_szrs = tk.Button(root, text="scissors!", command=szrs)
 btn_szrs.pack(padx=5, pady=5)
 
 
